@@ -11,3 +11,12 @@ return output of Switch - CASE 0 = rock
 STEP 3 ----------------------
 
 Prompt user for input and return choice
+
+
+STEP 5 ----------------------
+
+Take humanChoice and computerChoice
+Convert humanChoice to lowercase
+Use if-else to determine winner or tie
+Increment winner count
+Announce round result
