@@ -1,0 +1,8 @@
+
+STEP 2 ----------------------
+
+Generate random number >= 0 and <1
+Multiply by 3 and round to floor
+return output of Switch - CASE 0 = rock
+                        - CASE 1 = paper
+                        - CASE 2 = scissors
