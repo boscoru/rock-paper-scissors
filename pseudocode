@@ -6,3 +6,8 @@ Multiply by 3 and round to floor
 return output of Switch - CASE 0 = rock
                         - CASE 1 = paper
                         - CASE 2 = scissors
+
+
+STEP 3 ----------------------
+
+Prompt user for input and return choice
