@@ -16,19 +16,16 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
-
-//prompts human to enter choice and returns it    
-
-    return prompt("What's your choice?");
-}
-
 function playGame() {
 
 //plays game that continues until one player has won 5 rounds    
 
     let humanScore = 0;
     let computerScore = 0;
+
+    const humanDisplay = document.querySelector("#player");
+    const computerDisplay = document.querySelector("#computer");
+    const finalResult = document.querySelector(".winner");
 
     function playRound(humanChoice, computerChoice) {
 
@@ -61,26 +58,38 @@ function playGame() {
         } else {
             console.log("This round ended in a tie!")
         }
+        humanDisplay.textContent = humanScore;
+        computerDisplay.textContent = computerScore;
     }
 
-    //loops until there is a winner
-    while (humanScore < 5 && computerScore < 5){
-        playRound(getHumanChoice(), getComputerChoice()); //calls function to play one round
-        if (humanScore > computerScore) {  //announces current score
-            console.log("Human is winning, " + humanScore + " to "
-                + computerScore + "!")
-        } else if (computerScore > humanScore) {
-            console.log("Computer is winning, " + computerScore + " to "
-                + humanScore + "!")
-        } else { console.log("Score is tied!")}
+    function choice(e) {
+        let target = e.target;
+
+        switch(target.id) {
+            case 'rock':
+                playRound('rock', getComputerChoice());
+                break;
+            case 'paper':
+                playRound('paper', getComputerChoice());
+                break;
+            case 'scissors':
+                playRound('scissors', getComputerChoice());
+                break;
+        }
+        if (humanScore === 5 || computerScore === 5) {
+            buttons.removeEventListener('click', choice);
+            if (humanScore > computerScore) {
+                finalResult.textContent = "GAME OVER! HUMAN WINS, " + humanScore + " TO "
+                    + computerScore + "!";
+            } else { finalResult.textContent = "GAME OVER! COMPUTER WINS, " + computerScore + " TO "
+                + humanScore + "!" }
+        }   
     }
+    let buttons = document.querySelector('#buttons');
+    buttons.addEventListener('click', choice);
 
     //announces result of game
-    if (humanScore > computerScore) {
-        console.log("GAME OVER! HUMAN WINS, " + humanScore + " TO "
-            + computerScore + "!");
-    } else { console.log("GAME OVER! COMPUTER WINS, " + computerScore + " TO "
-        + humanScore + "!") }
+    
 
 }
 
