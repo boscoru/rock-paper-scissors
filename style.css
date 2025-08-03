@@ -1,0 +1,86 @@
+body {
+    color: white;
+    background-color: black;
+    font-family: arial;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 5em;
+    text-align: center;
+    margin: 16px 0;
+}
+
+#score {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+
+.competitor {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.score {
+    text-align: center;
+    font-size: 4em;
+}
+
+.teamscore {
+    border: 2px solid white;
+    border-radius: 16px;
+    padding: 24px;
+    width: 200px;
+}
+
+.round {
+    height: 154px;
+}
+
+.roundtitle {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 36px 0 16px 0;
+}
+
+button {
+    font-size: 2em;
+    border-radius: 8px;
+    padding: 16px 8px;
+    width: 250px
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    padding: 16px;
+}
+
+.choice {
+    white-space: pre;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#lastround {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.gameover {
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+    height: 154px;
+    line-height: 154px;
+}

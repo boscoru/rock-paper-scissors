@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-    <div class="competitor">PLAYER</div>
-    <div class="score" id="player">0</div>
-    <div class="competitor">COMPUTER</div>
-    <div class="score" id="computer">0</div>
-    <div id="buttons">
-        <button type="button" id="rock">ROCK</button>
-        <button type="button" id="paper">PAPER</button>
-        <button type="button" id="scissors">SCISSORS</button>
+    <h1>ROCK - PAPER - SCISSORS</h1>
+    <div id="score">
+        <div class="teamscore">
+            <div class="competitor">PLAYER</div>
+            <div class="score" id="player">0</div>
+        </div>
+        <div class="teamscore">
+            <div class="competitor">COMPUTER</div>
+            <div class="score" id="computer">0</div>
+        </div>
     </div>
-    <p class="winner"></p>
+    <div class="round">
+        <div class="roundtitle">NEXT ROUND - CHOOSE:</div>
+        <div id="buttons">
+            <button type="button" id="rock">ROCK &#129704</button>
+            <button type="button" id="paper">PAPER &#129534</button>
+            <button type="button" id="scissors">SCISSORS &#9986</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 
